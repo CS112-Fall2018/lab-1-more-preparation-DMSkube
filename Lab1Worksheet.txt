@@ -1,6 +1,9 @@
-Lab 1 Worksheet
+﻿Lab 1 Worksheet
 
 1. What if 12 bits were used to store a signed integer. What is the biggest/smallest possible integer?
+
+	Minimum Possible Integer: -(2**(11))
+	Maximum Possible Integer: (2**11) - 1
 
 2. Think about possible values and their range, say what type of variable would be suitable for the following, and suggest a name for it too. 
 
@@ -9,15 +12,34 @@ For example: the temperature of a room in degrees Fahrenheit. Room temperature i
 
 (i) The number of pages in a book; 
 
+	Book pages are discrete numbers, and Oxford English dictionary(a very long book) has a length of 15,490 pages. Since a short can contain integers up to 32,000, a 'short' will suffice. 
+	variable: bookPage
+
 (ii) The number of atoms in a book; 
+
+	Atoms are measured discretely and in large quantities. A 'long' will suffice.
+	variable: bookAtom
 
 (iii) The length of a side of a triangle in inches; 
 
+	Triangles may be measured continuously, but if the measurement in is inches not nanometers(or smaller), we don't need exceptional granularity. A 'float' will suffice.
+	variable: triangleLength
+
 (iv) Your name; 
 
-(v) Whether or not a nucleus has decayed; 
+	My name is spelled in characters, and thus should be written as a 'String' composed of 'char'.
+	variable: myName	
+
+
+(v) Whether or not a nucleus has decayed;
+
+	Decay is measured binarly, should be boolean.	
+	variable: decay
 
 (vi) The probability that it could have decayed. 
+
+	Probability is measured continuously with minimal granularity(typically two decimal places) and thus should be recorded as a 'float'.
+	variable: decayProb
 
 3. Start to do a little java programming! 
 	Follow the example of the Hello.java program and do some testing of Java int and float.
